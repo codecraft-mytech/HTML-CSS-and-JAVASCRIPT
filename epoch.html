@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epoch converter - unix timestamp converter</title>
+    <link rel="stylesheet" href="epoch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="main-container">
+        <div class="top-area">
+            <span class="logo">
+                <img src="favicon.ico" alt="logo"></i><b>Epoch</b> converter
+            </span>
+            <h1>Epoch & Unix Timestamp Conversion Tools</h1>
+            <hr>
+        </div>
+            <div class="main-area">
+                <div class="left-part">
+                    <div class="first-tube">
+                            <p>The current <a href="#">Unix epoch time</a> is </p>
+                            <div class="clock_area">
+                                <div id="clock">
+                            
+                                </div>
+                                <i class="fa-solid fa-pause"></i>
+        
+                            </div>
+                    </div>
+                    <div class="second-tube">
+                        <h2>Convert epoch to human-readable date and vice versa</h2>
+                        <div class="form">
+                            <input type="text" value="1721834038" id="form">
+                            <button id="form-button">Timestamp to Human date</button>
+                            <a href="#">[batch convert]</a>
+                            <p>Supports Unix timestamps in seconds, milliseconds, microseconds and nanoseconds.</p>
+                        </div>
+                        <div id="resultbox-1">
+                            Assuming that this time stamp is in
+                            <b>seconds:</b>
+                            <br>
+                            <b id="result-1">GMT:</b>
+                            <p id="result-1-para">Saturday, July 27, 2024 7:52:42 AM</p>
+                            <br>
+                            <b id="result-1">Your time zone:</b>
+                            <p id="result-2-para">saturday, July 27, 2024 1:22:42 PM GMT+05:30</p>
+                            <br>
+                            <b id="result-1">Relative:</b>
+                            <p id="result-3-para">A few seconds ago</p>
+                        </div>
+                    </div>
+                    <div class="third-tube">
+                        <table>
+                            <tr>
+                                <td id="td-1">Yr</td>
+                                <td id="td-2">Mon</td>
+                                <td id="td-3">Day</td>
+                                <td id="td-3">Hr</td>
+                                <td id="td-3">Min</td>
+                                <td id="td-3">Sec</td>
+                            </tr>
+                            <tr id="row-2">
+                                <td><input type="text" value="2000" id="utc-values-1" class="dateform-1"></td>
+                                <td><input type="text" value="7" id="utc-values-2" class="dateform-2"></td>
+                                <td><input type="text" value="25" id="utc-values-3" class="dateform-2"></td>
+                                <td><input type="text" value="25" id="utc-values-4" class="dateform-2"></td>
+                                <td><input type="text" value="25" id="utc-values-5" class="dateform-2"></td>
+                                <td><input type="text" value="25" id="utc-values-6" class="dateform-2"></td>
+                                <td><select id="select-2">
+                                    <option value="gmt">GMT</option>
+                                    <option value="local time">Local time</option>
+                                </select>
+                                </td>
+                                <td>
+                                    <button id="button_2">Human date to Timestamp</button>
+                                </td>
+                            </tr>
+                        </table>
+                         <div id="resultbox-2">
+                            <b id="result-2">Epoch timestamp:</b>
+                            <p id="result-para-1">1722068910</p>
+                            <br>
+                            <b id="result-2">Timestamp in milliseconds:</b>
+                            <p id="result-para-2">1722068910000</p>
+                            <br>
+                            <b id="result-2">Date and time (GMT):</b>
+                            <p id="result-para-3">Saturday, July 27, 2024 8:28:30 AM</p>
+                            <br>
+                            <b id="result-2">Date and time (your time zone):</b>
+                            <p id="result-para-4">Saturday, July 27, 2024 1:58:30 PM GMT+05:30</p>
+                        </div>
+                    </div>
+                    <div class="fourth-tube">
+                        <div class="form">
+                            <input type="text" value="Wed, 24 Jul 2024 14:06:41 GMT" id="date_input">
+                            <button  id="button_3">Human date to Timestamp</button>
+                            <a href="#">[batch convert]</a>
+                            <p>Input format: RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to convert to local time.</p>
+                        </div>
+                        <div id="resultbox-3">
+                            <b id="result-3">Epoch timestamp:</b>
+                            <p id="result-3para1">1722068910</p>
+                            <br>
+                            <b id="result-3">Timestamp in milliseconds:</b>
+                            <p id="result-3para2">1722068910000</p>
+                            <br>
+                            <b id="result-3">Date and time (GMT):</b>
+                            <p id="result-3para3">Saturday, July 27, 2024 8:28:30 AM</p>
+                            <br>
+                            <b id="result-3">Date and time (your time zone):</b>
+                            <p id="result-3para4">Saturday, July 27, 2024 1:58:30 PM GMT+05:30</p>
+                        </div>
+                        <div class="para-of-fourth">
+                            <p>Prefer a 24-hour clock? Go to <a href="#">preferences.</a></p>
+                                <p>Press <button id="button-2">c</button> to clear all forms.</p>
+                        </div>
+                    </div>
+
+                    <div class="fifth-tube">
+                        <div class="form-area">
+                            <h2>Epoch dates for the start and end of the year/month/day</h2>
+                            <div class="form-inner">
+                                <p>Show start & end of </p>
+                                <label class="nowrap radio">
+                                    <input type="radio" name="cw" id="yrselect">
+                                    year
+                                </label> 
+                                <label class="nowrap radio">
+                                    <input type="radio" name="cw" id="moselect">
+                                    month
+                                </label>
+                                <label class="nowrap radio">
+                                    <input type="radio" name="cw" id="dyselect">
+                                    day
+                                </label>                        
+                            </div>
+                            <table>
+                                <tr>
+                                <td id="td-1">Yr</td>
+                                <td id="td-2">Mon</td>
+                                <td id="td-3">Day</td>
+                                </tr>
+                                <tr id="row-2">
+                                    <td><input type="text" value="2024" class="dateform-1"></td>
+                                    <td><input type="text" value="7" class="dateform-2"></td>
+                                    <td><input type="text" value="25" class="dateform-2"></td>
+                                    <td><select id="select-2">
+                                        <option value="gmt">GMT</option>
+                                        <option value="local time">Local time</option>
+                                    </select>
+                                    </td>
+                                    <td>
+                                        <button>convert</button>
+                                        <a href="#">[batch convert]</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="resultbox-4">
+                            <table id="table-2">
+                                <tr>
+                                    <th></th>
+                                    <th>Epoch</th>
+                                    <th>Date and time</th>
+                                </tr>
+                                <tr>
+                                    <td>Start of year:</td>
+                                    <td>1704067200</td>
+                                    <td>Monday, January 1, 2024 12:00:00 AM</td>
+                                </tr>
+                                <tr>
+                                    <td>End of year:</td>
+                                    <td>1735689599</td>
+                                    <td>Tuesday, December 31, 2024 11:59:59 PM</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right part of forground -->
+                <div class="right-part">
+                    <h2>Pages</h2>
+                    <a href="#" id="fst-link">Home</a>
+                    <a href="#">Prefereces</a>
+                    <a href="#">Toogle Theme
+                        <i class="fa-regular fa-moon"></i>
+                    </a>
+                    <!-- first para -->
+                    <h4 id="fst-link">Tools
+                        <i class="fa-solid fa-angle-up"></i>
+                    </h4>
+                    <a href="#">Epoch converter</a>
+                    <a href="#">Batch converter</a>
+                    <a href="#">Time zone converter</a>
+                    <a href="#">Timestamp list</a>
+                    <a href="#">LDAP converter</a>
+                    <a href="#">WebKit/Chrome timestamp</a>
+                    <a href="#">Unix hex timestamp</a>
+                    <a href="#">Cocoa Core Data timestamp</a>
+                    <a href="#">Mac HFS+ timestamp</a>
+                    <a href="#">SAS timestamp</a>
+                    <a href="#">Seconds/days since year 0</a>
+                    <a href="#">Bin/Oct/Hex converter</a>
+                    <a href="#">Countdown in seconds</a>
+                    <a href="#">Epoch clock</a>
+                    <!-- second para -->
+                    <h2 id="fst-link">Date and Time
+                        <i class="fa-solid fa-angle-up"></i>
+                    </h2>
+                    <a href="#">Week numbers</a>
+                    <a href="#">Weeks by year</a>
+                    <a href="#">Day numbers</a>
+                    <a href="#">Days by year</a>
+                    <a href="#">Years/leap years</a>
+                    <a href="#">Calculate the difference</a>
+                    <a href="#">between two dates</a>
+                    <!-- third para -->
+                    <h2 id="fst-link">Programming
+                        <i class="fa-solid fa-angle-up"></i>
+                    </h2>
+                        <a href="#">Routines by language</a>
+                        <a href="#">Epoch in C</a>
+                        <a href="#">Epoch in MySQL</a>
+                        <a href="#">Epoch in PERL</a>
+                        <a href="#">Epoch in PHP</a>
+                        <a href="#">Epoch in JS/VBScript/ASP</a>  
+                    <!-- fourth para -->
+                     <h2 id="fst-link">More
+                        <i class="fa-solid fa-angle-up"></i>
+                     </h2>
+                     <a href="#">Comments & questions</a>
+                     <a href="#">Este sitio en Español</a>
+                     <a href="#">Charset Tools</a>
+                </div>
+            </div>
+
+
+
+    <script src="epoch.js"></script>
+</body>
+</html>
